@@ -14,20 +14,14 @@ export default {
   data() {
     return {
       titulo: "Alurapic",
-      fotos: [
-        {
-          id:0,
-          url: "https://images.dog.ceo/breeds/boxer/28082007167-min.jpg",
-          titulo: "foto cachorro",
-        },
-        {
-          id:1,
-          url: "https://images.dog.ceo/breeds/akita/Akita_inu_blanc.jpg",
-          titulo: "foto cachorro",
-        },
-      ],
+      fotos: [],
     };
   },
+  created() {
+    this.$http.get('http://localhost:3000/v1/fotos')
+    .then(result => result.json())
+    .then(fotos => this.fotos = fotos, err => console.log(err));
+  }
 };
 </script>
 
