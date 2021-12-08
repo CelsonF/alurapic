@@ -6,6 +6,13 @@
       <li class="lista-fotos-item" v-for="foto in fotosComFiltro">
         <meu-painel :titulo="foto.titulo">
             <imagem-responsiva class="imagem-responsiva" :url="foto.url" :titulo="foto.titulo" />
+            <meu-botao 
+              @botaoAtivado="remove(foto)" 
+              :confirmacao="true" 
+              tipo="button" 
+              estilo="perigo"
+              rotulo="Remover"
+            />
         </meu-painel>
       </li>
     </ul>
@@ -15,11 +22,13 @@
 <script>
 import Painel from '../shared/painel/Painel.vue'
 import ImagemResponsiva from '../shared/imagem-responsiva/ImagemResponsiva.vue'
+import Botao from '../shared/botao/Botao.vue'
 
 export default {
   components:{
   'meu-painel':Painel,
-  'imagem-responsiva':ImagemResponsiva
+  'imagem-responsiva':ImagemResponsiva,
+  'meu-botao':Botao
   },
   
   data() {
@@ -38,6 +47,12 @@ export default {
         (err) => console.log(err)
       );
   },
+  methods: {
+    remove(foto) {
+        alert(`Remover foto ${foto.titulo}.`);
+    }
+  }
+  ,
   computed: {
     fotosComFiltro() {
        if (this.filtro) {
