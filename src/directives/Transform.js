@@ -1,16 +1,24 @@
-import Vue from 'vue';
-
-Vue.directive('meu-transform', {
+export default {
 
     bind(el, binding, vnode) {
         let current = 0;
 
         el.addEventListener('dblclick', function () {
             let increment = binding.value || 90;
+            let efect;
 
-            binding.modifiers.reverse ? current -= increment : current += increment;
+            if (!binding.arg || binding.arg === 'rotate') 
+            {
+                binding.modifiers.reverse ? current -= increment : current += increment;
 
-            el.style.transform = `rotate(${current}deg)`;
+                efect = `rotate(${current}deg)`;
+            }
+            else if(binding.arg === 'scale') 
+            {
+              efect = `scale(${increment})`;
+            }
+
+            el.style.transform = efect;
             
             if (binding.modifiers.animate) 
             {
@@ -18,5 +26,4 @@ Vue.directive('meu-transform', {
             }
         });
     }
-
-});
+};
