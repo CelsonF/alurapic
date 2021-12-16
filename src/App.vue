@@ -18,7 +18,8 @@ export default {
 
   data() {
     return {
-     routes
+     routes 
+     
     }
   }
 
