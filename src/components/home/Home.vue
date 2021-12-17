@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="centralizado" v-text="titulos"></h1>
+    <h1 class="centralizado" v-text="titulo"></h1>
     <input type="search" class="filtro" placeholder="Filtrar pelo titulo" @input="filtro = $event.target.value"/>
     <ul class="lista-fotos">
       <li class="lista-fotos-item" v-for="foto in fotosComFiltro">
