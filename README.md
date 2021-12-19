@@ -1,4 +1,4 @@
-# alurapic
+# Alurapic
 
 > A Vue.js project Alura PIC for Learn Vue.js 2.x.x and 3.x.x
 
