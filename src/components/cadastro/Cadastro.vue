@@ -42,15 +42,20 @@ export default {
   },
   data() {
     return {
-      foto: new Foto()
+      foto: new Foto(),
+      resource:{}
     }
   },
   methods: {
     grava() {
-      this.$http
-        .post('http://localhost:3000/v1/fotos',this.foto)
-        .then(() => this.foto = new Foto(), err => console.log(err));
+      this.resource
+      .save(this.foto)
+      .then(() => this.foto = new Foto(), err => console.log(err));
     }
+  },
+  created() {
+
+    this.resource = this.$resource('v1/fotos')
   }
 }
 
