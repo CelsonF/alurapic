@@ -5,21 +5,21 @@
     <form action="" @submit.prevent="grava">
       <div class="controle">
         <label for="titulo"> TÍTULO </label>
-        <input type="text" id="titulo" autocomplete="off" v-model.lazy="foto.titulo"/>
+        <input type="text" id="titulo" autocomplete="off" v-model.lazy="foto.titulo" required/>
       </div>
       <div class="controle">
         <label for="url">URL</label>
-        <input type="text" id="url" autocomplete="off" v-model.lazy="foto.url"/>
+        <input type="text" id="url" autocomplete="off" v-model.lazy="foto.url" required/>
         <imagem-responsiva v-show="foto.url" :url="foto.url" :titulo="foto.titulo" />
       </div>
       <div class="controle">
         <label for="descricao">DESCRIÇÃO</label>
         <textarea name="descricao" id="descricao" rows="5" autocomplete="off" 
-         v-model="foto.descricao"></textarea>
+         v-model="foto.descricao" required></textarea>
       </div>
       <div class="centralizado">
         <meu-botao rotulo="GRAVAR" tipo="submit"/>
-        <router-link to="/">
+        <router-link :to="{name:'home'}">
            <meu-botao rotulo="VOLTAR" tipo="button"/>
         </router-link>
       </div>
