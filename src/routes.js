@@ -28,5 +28,4 @@ export const routes = [
     component:Home,
     menu:false
    }
-
 ];
