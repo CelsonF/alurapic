@@ -63,11 +63,12 @@ export default {
   .centralizado {
     text-align: center;
   }
+  
   .controle {
     font-size: 1.2em;
     margin-bottom: 20px;
-
   }
+
   .controle label {
     display: block;
     font-weight: bold;
