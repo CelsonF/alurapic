@@ -1,18 +1,18 @@
 # Alurapic
 
-> A Vue.js project Alura PIC for Learn Vue.js 2.x.x and 3.x.x
+> Um projeto em Vue.js Alura PIC para aprender sobre Vue.js 2.x.x e 3.x.x
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# instalando dependências
 npm install
 
-# serve with hot reload at localhost:8080
+# Server com hot Reload em localhost:8080
 npm run dev
 
-# build for production with minification
+# Realizando build para produção com minificação
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Para mais detalhes de como o Vue-loader trabalha acesse [docs for vue-loader](http://vuejs.github.io/vue-loader).
