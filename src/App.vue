@@ -21,7 +21,6 @@ export default {
      routes: routes.filter(route => route.menu) 
     }
   }
-
 };
 </script>
 
