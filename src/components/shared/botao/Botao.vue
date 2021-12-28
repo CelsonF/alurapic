@@ -51,7 +51,9 @@ computed: {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+   $removeBtn:firebrick;
+
    .botao {
        display: inline-block;
        padding: 0.625rem;
@@ -61,7 +63,7 @@ computed: {
    }
 
    .botao-perigo {
-       background-color: firebrick;
+       background-color: $removeBtn;
        color: #FFF;
    }
 
