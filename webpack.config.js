@@ -62,7 +62,13 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  plugins: [
+    new webpack.ProvidePlugin({
+       $: 'jquery/dist/jquery.js',
+       jQuery: 'jquery/dist/jquery.js'
+   })
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -71,7 +77,8 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: '"production"',
+        API_URL:'"http://enderecodasuaapi.com"'
       }
     }),
     new webpack.optimize.UglifyJsPlugin({

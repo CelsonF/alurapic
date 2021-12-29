@@ -51,25 +51,8 @@ computed: {
 }
 </script>
 
-<style lang="scss" scoped>
-   $removeBtn:firebrick;
-
-   .botao {
-       display: inline-block;
-       padding: 0.625rem;
-       margin: 0.625rem;
-       border-radius: 0.187rem;
-       font-size: 1.2rem;
-   }
-
-   .botao-perigo {
-       background-color: $removeBtn;
-       color: #FFF;
-   }
-
-   .botao-padrao {
-       background-color: darkcyan;
-       color: #FFF;
-   }
+<style lang="sass" scoped>
+ 
+ @import './Botao.scss';
 
 </style>

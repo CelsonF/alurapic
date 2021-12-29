@@ -4,7 +4,7 @@
     <p v-show="mensagem" class="centralizado">{{mensagem}}</p>
     <input type="search" class="filtro" placeholder="Filtrar pelo titulo" @input="filtro = $event.target.value"/>
     <ul class="lista-fotos">
-      <li class="lista-fotos-item" v-for="foto in fotosComFiltro">
+      <li class="lista-fotos-item" v-for="foto of fotosComFiltro" :key="foto._id">
         <meu-painel :titulo="foto.titulo">
             <imagem-responsiva v-meu-transform:rotate.animate.reverse="25" :url="foto.url" :titulo="foto.titulo" />
             

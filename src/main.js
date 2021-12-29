@@ -8,10 +8,13 @@ import PtBr from 'vee-validate/dist/locale/pt_BR';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
+import 'jquery/src/jquery.js'
+
 import './assets/css/teste.css';
+import './assets/js/teste.js';
 
 Vue.use(VueResource);
-Vue.http.options.root = 'http://localhost:3000';
+Vue.http.options.root = process.env.API_URL ? process.env.API_URL : 'http://localhost:3000';
 
 Vue.use(VueRouter);
 
